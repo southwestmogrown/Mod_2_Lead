@@ -17,7 +17,9 @@ hexadecimalToString(['0x0048', '0x0065', '0x0078', '0x0061']) => 72, 101, 120, 9
 *******************************************************/
 
 function hexadecimalToString(hexadecimalChars) {
-    // Your code here
+    return hexadecimalChars.map(hexChar => {
+        return String.fromCharCode(hexChar);
+    }).join('');
 }
 
 /* Comment in code below to run local tests */
