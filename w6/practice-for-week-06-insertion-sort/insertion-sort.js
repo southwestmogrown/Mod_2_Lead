@@ -19,6 +19,26 @@ function insertionSort(arr) {
   */
 
   // Your code here
+
+  const copy = [...arr];
+  const sorted = [];
+
+  while (copy.length) {
+    console.log(sorted.join(','));
+    const el = copy.pop();
+    sorted.push(null);
+    let i = sorted.length - 1;
+
+    while (i > 0) {
+      if (sorted[i-1] <= el) break;
+      else {
+        sorted[i] = sorted[i-1];
+        i--;
+      }
+    }
+    sorted[i] = el;
+  }
+  return sorted
 }
 
 // In-place Insertion Sort
@@ -39,6 +59,26 @@ function insertionSortInPlace(arr) {
   - Increment the dividing pointer and repeat
   Return the mutated array
   */
+
+  let divider = 1;
+
+  while (divider < arr.length) {
+    console.log(arr.join(','));
+
+    let val = arr[divider];
+    let i = divider;
+
+    while (i > 0) {
+      if (arr[i-1] > val) {
+        arr[i] = arr[i-1];
+        i--;
+      } else break;
+    }
+
+    arr[i] = val;
+    divider++;
+  }
+  return arr;
 
   // Your code here
 }
