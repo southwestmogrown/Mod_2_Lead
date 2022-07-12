@@ -1,5 +1,5 @@
 function linearSearch (arr, target) {
-  return arr[arr.indexOf(target)] ? arr[arr.indexOf(target)] : -1
+  return arr.indexOf(target)
 };
 
 function binarySearch(arr, target) {
