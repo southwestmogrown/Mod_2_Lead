@@ -173,7 +173,7 @@ class BinarySearchTree {
   //  / \   / \
   // 1   3 5   7
 
-  // 4,
+  // 4,2,6,7,5,2,3,1
   // Depth First Traversal - Iterative
   depthFirstTraversal(/*currNode=this.root*/) {
       if (!this.root) return;
@@ -183,7 +183,7 @@ class BinarySearchTree {
       while (stack.length) {
           let curr = stack.pop(); // 1
 
-          console.log(curr.val); // 2,6,7,5,2,3,1
+          console.log(curr.val); // 4,2,6,7,5,2,3,1
 
           if (curr.left) stack.push(curr.left); // 
           if (curr.right) stack.push(curr.right); //
