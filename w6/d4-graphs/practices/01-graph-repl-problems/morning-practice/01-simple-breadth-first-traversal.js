@@ -15,14 +15,14 @@ function printBreadthFirst(start) {
     while (queue.length) {
         const curr = queue.shift();
 
-        console.log(curr);
+        console.log(curr)
 
         adjList[curr].forEach(neighbor => {
             if (!visited.has(neighbor)) {
                 queue.push(neighbor);
                 visited.add(neighbor);
             }
-        })
+        });
     }
 }
 
