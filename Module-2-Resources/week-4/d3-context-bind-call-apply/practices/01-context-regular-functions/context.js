@@ -8,6 +8,7 @@ class Fish {
   }
 
   swim() {
+    console.log(this)
     console.log(`${this.name} swimming in the water`);
   }
 }
@@ -15,23 +16,25 @@ class Fish {
 const nemo = new Fish('Nemo');
 
 /********************************* Scenario 1 *********************************/
-// eat(); // ?
+// will print "undefined eats fish food"
+// eat(); 
 
 
 /********************************* Scenario 2 *********************************/
+// prints "Nemo eats fish food"
 // nemo.eat = eat;
 // nemo.eat(); // ?
 
 
 /********************************* Scenario 3 *********************************/
 // nemo.eat = eat;
-// eat(); // ?
+// eat(); // prints "undefined eats fishfood"
 
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // ?
+// nemo.swim(); // prints "Nemo swimming in the water"
 
 
 /********************************* Scenario 5 *********************************/
 // const swim = nemo.swim;
-// swim(); // ?
+// swim(); // throws an error
